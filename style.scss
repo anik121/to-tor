@@ -1,0 +1,228 @@
+$sidenav_color: #1e272e;
+body{
+    background-color: #dcdde1;
+}
+header.row{
+    margin-bottom: 0;
+}
+.top-menu{
+    text-align: center;
+    background-color: white;
+    .terms,.social{
+        width: 40%;
+        margin-top: 45px;
+        li{
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        a{
+            transition: all 0.5s;
+            padding: 10px;
+            color: black;
+        }
+    }
+    .terms{
+        li:hover a{
+            background-color: black;
+            color: white;
+        }    
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        width: 12%;
+        img{
+         width: 170px;
+         height: auto;
+        }
+    }
+    .social{
+        a{
+            background-color: transparent;
+
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+
+
+#portfolio{
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    .title{
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img{
+            width: 250px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .except{
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+#about{
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    .content{
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+#map{
+
+    iframe{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+
+#information{
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    .box{
+        img{
+            width: 100%;
+            height: auto;
+        }
+        .excerpt{
+            color: gray;
+        }
+    }
+}
+
+#subcribe{
+    padding: 50px;
+    background-color: #3742fa;
+    text-align: center;
+    .title{
+        color: white;
+    }
+    input{
+        width: 80%;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+#footer{
+    width: 100%;
+    background-color: white;
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .widget{
+        width: 100%;
+        color: gray;
+        a{
+            color: gray;
+        }
+    }
+}
+
+
+footer{
+    text-align: center;
+}
+
+
+aside{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    background-color: $sidenav_color;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    transition: all 0.5s;
+    z-index: 100;
+    color: white;
+    .close_trigger{
+        color: white;
+        float: right;
+        margin-right: 20px;;
+        i{
+            font-size: 30px;
+        }
+    }
+    #menu_list{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        line-height: 2;
+        font-size: 20px;
+        padding: 0 20px;
+        position: relative;
+        cursor: pointer;
+        a{
+            color: white;
+        }
+        &:hover{
+            background-color: lighten($sidenav_color,10);
+        }
+        &:hover .sub-menu{
+            transform: rotate(0) rotateY(0);
+            opacity: 1;
+        }
+    }
+    .has-sub-menu::after{
+        content: '\f078';
+        font-family: FontAwesome;
+        position: absolute;
+        right: 10px;
+    }
+    .sub-menu{
+        position: absolute;
+        top: 35px;
+        left: 80px;
+        background-color: $sidenav_color;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        perspective: 800px;
+        transform-origin: top left;
+        transform: rotate(90deg) rotateY(90deg);
+        opacity: 0;
+        transition: all 0.5s;
+        z-index: 10;
+        li{
+            font-size: 14px;
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+}
