@@ -6,11 +6,19 @@ header.row{
     margin-bottom: 0;
 }
 .top-menu{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: white;
-    .terms,.social{
-        width: 40%;
-        margin-top: 45px;
+    background-color: transparent;
+    
+    .terms,.order{
+        background-color: white;
+        padding: 0 5px;
         li{
             display: inline-block;
             font-size: 18px;
@@ -21,36 +29,85 @@ header.row{
             padding: 10px;
             color: black;
         }
-    }
-    .terms{
         li:hover a{
             background-color: black;
             color: white;
-        }    
+        }  
     }
+    
     .logo{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px;
-        width: 12%;
+        width: 170px;
+        padding: 15px 35px;
+        background-color: white;
+        border-radius: 50%;
+        overflow: hidden;
         img{
          width: 170px;
          height: auto;
         }
     }
-    .social{
-        a{
-            background-color: transparent;
-
-        }
+    .order{
+       
         i{
-            font-size: 30px;
+            font-size: 20px;
         }
     }
 }
 
+#banner{
+    background: url(img/bg.jpg) no-repeat center center /cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .cloud1{
+        width: 700px;
+        animation: cloud1 50s linear infinite;
+        position: absolute;
+        left: -50%;
+        opacity: 0.9;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .cloud2{
+        position: absolute;
+        bottom: -125px;
+        right: -90%;
+        width: 100%;
+        animation: cloud2 50s linear infinite;
+        opacity: 0.9;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
+@keyframes cloud1{
+    0%{left: -50%;opacity: 0.9;}
+    90%{left: 100%;opacity: 0.9;}
+    100%{left: 100%; opacity: 0;}
+}
+@keyframes cloud2{
+    0%{right: -90%;opacity: 0.9;}
+    90%{right: 100%;opacity: 0.9;}
+    100%{right: 100%; opacity: 0;}
+}
+
+
+
+
+.go-top{
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    display: none;
+}
 
 #portfolio{
     width: 90%;
@@ -123,14 +180,7 @@ header.row{
     padding: 50px;
     background-color: #3742fa;
     text-align: center;
-    .title{
-        color: white;
-    }
-    input{
-        width: 80%;
-        color: white;
-        font-size: 20px;
-    }
+    color: white;
 }
 
 #footer{
@@ -223,6 +273,22 @@ aside{
             font-size: 14px;
             margin: 0;
             padding: 5px 10px;
+        }
+    }
+}
+
+
+
+
+@media (max-width:800px){
+    .top-menu{
+        display: block;
+        margin: auto;
+        .terms,.order{
+        padding: 2px 0;
+        }
+        .logo{
+            margin: auto;
         }
     }
 }

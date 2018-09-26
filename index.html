@@ -14,29 +14,39 @@
 </head>
 <body>
 
-<header class="top-menu row">
+    <div id="banner">
+        <div class="cloud1">
+            <img src=img/cloud3.png alt="cloud1">
+        </div>
+        <div class="cloud2">
+            <img src=img/cloud1.png alt="cloud1">
+        </div>
+        <!-- <div class="cloud3">
+            <img src=img/cloud3.png alt="cloud1">
+        </div> -->
+   </div>
+
+<header class="container top-menu scrollspy" id="header">
         
-<div class="terms col s12 m5">
+<div class="terms">
 <ul>
     <li><a href="javascript:void(0)" class="menu_trigger"><i style="font-size:30px;" class="fa fa-bars" aria-hidden="true"></i></a></li>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Service</a></li>
-    <li><a href="#">Feedback</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#information">Information</a></li>
+    <li><a href="#subcribe">Subcribe</a></li>
 </ul>
 </div>
 
-<div class="logo col s12 m2">
+<div class="logo">
     <a href="index.html"><img src="img/logo.png" alt="site-logo"></a>
 </div>
 
-<div class="social col s12 m5">
+<div class="order">
      <ul>
-         <li><a href="#!"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-         <li><a href="#!"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-         <li><a href="#!"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-         <li><a href="#!"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-         <li><a href="#!"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+        <li><a href="#!"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Booking Now</a></li>
+        <li class="login"><a href="#!">Login</a></li>
+        <li class="singup"><a href="#!">Singup</a></li>
      </ul>
 </div>
 </header>    
@@ -77,16 +87,9 @@
     </ul>
 </aside>
 
-<!-- slider  area-->
-<div class="carousel carousel-slider">
-        <a class="carousel-item" href="#one!"><img src="img/adventure-albay-clouds-672358.jpg"></a>
-        <a class="carousel-item" href="#one!"><img src="img/adventure-blur-cartography-408503.jpg"></a>
-        <a class="carousel-item" href="#one!"><img src="img/asphalt-environment-grass-239520.jpg"></a>
-</div>
+<a href="#header" class="btn-floating pulse black go-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
 
-
-
-<section id="portfolio">
+<section id="portfolio" class="scrollspy">
     <h4 class="title">Protfolio</h4>
 <div class="row">
     <div class="col s12 m6 box">
@@ -132,7 +135,7 @@
 
 <!-- about us section -->
 
-<section id="about">
+<section id="about" class="scrollspy">
 <div class="container content">
     <h4>About Us</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum necessitatibus iure magni ea dicta ratione quam. Voluptas sapiente ad illo id, amet vero excepturi a ut doloremque itaque expedita quidem laborum possimus est dolores minima cupiditate laudantium asperiores iure dolorem. Nostrum commodi quidem eius quibusdam nisi id vel voluptatum, consequuntur amet culpa, deserunt voluptatibus eos iusto reprehenderit dolore non quia, incidunt eveniet aperiam libero. Similique at, perferendis tempore nihil labore voluptates cumque animi ex officiis perspiciatis. Non modi molestias nemo, molestiae rem voluptas nesciunt cumque minima quis vitae, cupiditate, obcaecati similique! Voluptates doloremque assumenda minima maiores ut, neque dolorum.</p>
@@ -147,7 +150,7 @@
 
 
 
-<section id="information">
+<section id="information" class="scrollspy">
     <div class="row">
         <div class="col s12 m3 box">
             <div class="img">
@@ -193,10 +196,13 @@
 </section>
 
 
-<section id="subcribe">
+<section id="subcribe" class="scrollspy">
     <h3 class="title">Subcribe For Latest News</h3>
-    <form action="index.html">
-<input type="email" placeholder="Enter Your Email">
+    <form action="index.html" class="row">
+<div class="input-field col s7">
+    <input type="email" id="mail">
+    <label for="mail">Enter Your Mail</label>
+</div>
 </form>
 </section>
 
