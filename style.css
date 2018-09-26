@@ -391,5 +391,8 @@ aside .sub-menu li {
   .top-menu .logo {
     margin: auto;
   }
+  #footer .content {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
