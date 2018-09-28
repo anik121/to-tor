@@ -67,6 +67,7 @@ header.row{
         width: 700px;
         animation: cloud1 50s linear infinite;
         position: absolute;
+        top: 0;
         left: -50%;
         opacity: 0.9;
         img{
@@ -76,9 +77,9 @@ header.row{
     }
     .cloud2{
         position: absolute;
-        bottom: -125px;
+        bottom: 0px;
         right: -90%;
-        width: 100%;
+        width: 90%;
         animation: cloud2 50s linear infinite;
         opacity: 0.9;
         img{
@@ -262,7 +263,7 @@ aside{
         top: 35px;
         left: 80px;
         background-color: $sidenav_color;
-        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        box-shadow: 0 0 5px rgba(0,0,0,1);
         perspective: 800px;
         transform-origin: top left;
         transform: rotate(90deg) rotateY(90deg);
@@ -273,6 +274,7 @@ aside{
             font-size: 14px;
             margin: 0;
             padding: 5px 10px;
+            width: 200px;
         }
     }
 }
